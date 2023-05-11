@@ -16,4 +16,4 @@ def sql(query):
 @app.route('/')
 def index():
   fruits = sql('SELECT * FROM fruits')
-  return fruits
+  return render_template('index.html', fruits=fruits)
