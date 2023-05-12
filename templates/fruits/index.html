@@ -1,29 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<h1>Fruits App</h1>
-	<a href="/fruits/new">Add fruit item</a>
+{% extends 'base.html' %}
 
-	<section class="fruits">
-    {% for id, name, image_url, sugar, calories, carbohydrates in fruits: %}
-    <section class="fruit">
-      <header>
-        <h2>{{ name }}</h2>
-      </header>
+{% block content %}
 
-			<img src="{{ image_url }}" alt="">
-			<h3>Sugar: {{ sugar }}</h3>
-			<h3>Calories: {{ calories }}</h3>
-			<h3>Carbohydrates: {{ carbohydrates }}</h3>
-    </section>
-    {% endfor %}
-  </section>
+<h1>Fruits App</h1>
+<a href="/fruits/new">Add your favorate fruit</a>
 
-</body>
-</html>
+<section class="fruits">
+	{% for id, name, image_url, sugar, calories, carbohydrates in fruits: %}
+	<section class="fruit">
+		<header>
+			<h2>{{ name }}</h2>
+		</header>
+
+		<img src="{{ image_url }}" alt="">
+		<h3>Sugar: {{ sugar }}</h3>
+		<h3>Calories: {{ calories }}</h3>
+		<h3>Carbohydrates: {{ carbohydrates }}</h3>
+	</section>
+	{% endfor %}
+</section>
+{% endblock %}
