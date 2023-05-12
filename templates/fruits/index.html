@@ -8,18 +8,19 @@
 </head>
 <body>
 	<h1>Fruits App</h1>
+	<a href="/fruits/new">Add fruit item</a>
 
 	<section class="fruits">
-    {% for fruit in fruits: %}
+    {% for id, name, image_url, sugar, calories, carbohydrates in fruits: %}
     <section class="fruit">
       <header>
-        <h2>{{ fruit[1] }}</h2>
+        <h2>{{ name }}</h2>
       </header>
 
-      <img src="{{ fruit[2] }}" alt="">
-			<h3>Sugar: {{ fruit[3] }}</h3>
-			<h3>Calories: {{ fruit[4] }}</h3>
-			<h3>Carbohydrates: {{ fruit[5] }}</h3>
+			<img src="{{ image_url }}" alt="">
+			<h3>Sugar: {{ sugar }}</h3>
+			<h3>Calories: {{ calories }}</h3>
+			<h3>Carbohydrates: {{ carbohydrates }}</h3>
     </section>
     {% endfor %}
   </section>
