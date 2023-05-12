@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% set id, name, image_url, sugar, calories, carbohydrates = fruit %}
+<h1>Edit Fruit</h1>
+<form action="/fruits/{{ id }}" method="POST">
+
+  <label for="">Name:</label>
+  <input type="text" name="name" value="{{ name }}">
+
+  <label for="">Image URL:</label>
+  <input type="text" name="image_url" value="{{ image_url }}">
+
+	<label for="">Sugar:</label>
+  <input type="text" name="sugar" value="{{ sugar }}">
+
+	<label for="">Calories:</label>
+  <input type="text" name="calories" value="{{ calories }}">
+
+	<label for="">Carbohydrates:</label>
+  <input type="text" name="carbohydrates" value="{{ carbohydrates }}">
+
+  <button>Update food</button>
+
+{% endblock %}

@@ -6,10 +6,16 @@
 <a href="/fruits/new">Add your favorate fruit</a>
 
 <section class="fruits">
-	{% for id, name, image_url, sugar, calories, carbohydrates in fruits: %}
+
+	{% for fruit in fruits: %}
+  {% set id, name, image_url, sugar, calories, carbohydrates = fruit %}
+
 	<section class="fruit">
 		<header>
 			<h2>{{ name }}</h2>
+			<section class="controls">
+				<a href="/fruits/{{ id }}/edit">Edit</a>
+			</section>
 		</header>
 
 		<img src="{{ image_url }}" alt="">
