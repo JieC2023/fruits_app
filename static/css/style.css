@@ -67,3 +67,25 @@ label, input {
 	display: block;
 	padding: 3px;
 }
+
+.welcome {
+	margin: 0.8rem 0.3rem;
+
+}
+
+img.welcome {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 20px;
+}
+
+h5.welcome {
+	text-align: center;
+	color: #A45C40;
+}
+
+h6.reminder {
+	color:#F51720;
+	margin: 0.5rem 0;
+}
