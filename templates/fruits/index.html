@@ -1,28 +1,48 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <h1>Fruits App</h1>
-<a href="/fruits/new">Add your favorate fruit</a>
+
+{% if current_user %}
+<h3>Welcome to Fruits App! {{ current_user['first_name'] }}</h3>
+
+<section class="controls">
+	<form action="/sessions/delete" method="POST">
+		<a href="/fruits/new">Add your favorate fruit</a>
+		<button class="logout">Log out</button>	
+	</form>
+
+</section>
 
 <section class="fruits">
 
 	{% for fruit in fruits: %}
-  {% set id, name, image_url, sugar, calories, carbohydrates = fruit %}
-
 	<section class="fruit">
 		<header>
-			<h2>{{ name }}</h2>
+			<h2>{{ fruit['name'] }}</h2>
 			<section class="controls">
-				<a href="/fruits/{{ id }}/edit">Edit</a>
+				<a href="/fruits/{{ fruit['id'] }}/edit">Edit</a>
+
+				<form action="/fruits/{{ fruit['id'] }}/delete" method="POST">
+					<button>Delete</button>
+				</form>
+	
+				<form action="/fruits/{{ fruit['id'] }}/likes" method="POST">
+					<button class="heart">&#9829</button>
+				</form>
 			</section>
 		</header>
 
-		<img src="{{ image_url }}" alt="">
-		<h3>Sugar: {{ sugar }}</h3>
-		<h3>Calories: {{ calories }}</h3>
-		<h3>Carbohydrates: {{ carbohydrates }}</h3>
+		<img src="{{ fruit['image_url'] }}" alt="">
+		<h3>Sugar: {{ fruit['sugar'] }}</h3>
+		<h3>Calories: {{ fruit['calories'] }}</h3>
+		<h3>Carbohydrates: {{ fruit['carbohydrates'] }}</h3>
 	</section>
 	{% endfor %}
 </section>
+
+{% else %}
+<a href="/users/new">Sign up</a>
+<a href="/sessions/new">Log in</a>
+{% endif %}
 {% endblock %}

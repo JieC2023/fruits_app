@@ -1,25 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% set id, name, image_url, sugar, calories, carbohydrates = fruit %}
+
 <h1>Edit Fruit</h1>
-<form action="/fruits/{{ id }}" method="POST">
+<form action="/fruits/{{ fruit['id'] }}" method="POST">
 
   <label for="">Name:</label>
-  <input type="text" name="name" value="{{ name }}">
+  <input type="text" name="name" value="{{ fruit['name'] }}">
 
   <label for="">Image URL:</label>
-  <input type="text" name="image_url" value="{{ image_url }}">
+  <input type="text" name="image_url" value="{{ fruit['image_url'] }}">
 
 	<label for="">Sugar:</label>
-  <input type="text" name="sugar" value="{{ sugar }}">
+  <input type="text" name="sugar" value="{{ fruit['sugar'] }}">
 
 	<label for="">Calories:</label>
-  <input type="text" name="calories" value="{{ calories }}">
+  <input type="text" name="calories" value="{{ fruit['calories'] }}">
 
 	<label for="">Carbohydrates:</label>
-  <input type="text" name="carbohydrates" value="{{ carbohydrates }}">
+  <input type="text" name="carbohydrates" value="{{ fruit['carbohydrates'] }}">
 
-  <button>Update food</button>
+  <button>Update Fruit</button>
 
 {% endblock %}

@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Add Fruit</h1>
+<h1>Add your favorate fruit</h1>
+<section>
+
+</section class="add">
 <form action="/fruits" method="POST">
 	<label for="">Name:</label>
 	<input type="text" name="name">
-
+	
 	<label for="">Image URL:</label>
 	<input type="text" name="image_url">
 
@@ -17,7 +20,7 @@
 
 	<label for="">Carbohydrates:</label>
 	<input type="text" name="carbohydrates">
-
-	<button>Add Fruit</button>
+	<br>
+	<button>Add</button>
 </form>
 {% endblock %}
