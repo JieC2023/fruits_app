@@ -16,6 +16,11 @@ My second individual project: Fruit App
 ```
 - The motivation behind this project was to improve my skills in full-stack web development. I wanted to challenge myself by building an App using HTML, CSS, PYTHON and FLask. 
 
+- This is how the Fruit App looks:
+https://i.imgur.com/Ecm9emh.jpeg
+
+https://i.imgur.com/eOR5Z2x.jpeg
+
 ## :pencil2: Planning & Problem Solving
 - Please take a look at the workflow below.
 
