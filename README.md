@@ -1,6 +1,9 @@
 # fruits_app
 My second individual project: Fruit App
-## :computer: [Click here](https://) to see my live project!
+## :computer: [Click here](https://fruits-app-73i8.onrender.com/fruits) to see my live project!
+- If you prefer not to sign up, please use the following email and password to sign in:
+- Email:j.d@google.com
+- Password: 123456
 
 ## :page_facing_up: About
 - This project is a simple fruits data base built with HTML, CSS, PYTHON and FLASK. There are some people who have issues dealing with sugar consumption. They can generally eat fruits in moderation as part of a balanced diet. This App provides three key values based on 100 grams of the listed fruit, which are sugar, calories and carbohydrates. The App can allow users to be aware of how much sugar and carbohydrates a particular fruit contains.
@@ -27,8 +30,9 @@ My second individual project: Fruit App
 - FLASK
 
 ## :scream: Bugs to fix :poop:
-- If nothing was entered into the search bar and search button is clicked, the app would break.
+- If nothing was entered into the search bar and search button was clicked, the app would break.
 
+- When adding or editing, if nothing was entered into the input field and the button was clicked, the app would break.
 
 ## :white_check_mark: Future features
 - Put the most liked fruit on top of the other fruits

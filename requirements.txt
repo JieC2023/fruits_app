@@ -3,3 +3,5 @@ psycopg2-binary
 bcrypt
 gunicorn
 python-dotenv
+requests
+
