@@ -28,8 +28,6 @@ cursor: pointer;
 border-radius: 3px;
 }
 
-
-
 .fruit h2 {
 /* apply these settings to stop text from overflowing when it's really long */
 white-space: nowrap;
@@ -88,4 +86,18 @@ h5.welcome {
 h6.reminder {
 	color:#F51720;
 	margin: 0.5rem 0;
+}
+
+.searchfruit {
+	width: 100%;
+	height: 400px;
+	object-fit: scale-down;
+}
+
+.searchbar {
+	margin: 1rem 0;
+}
+
+.searchbutton {
+	margin: 1rem 0;
 }

@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, session
-from models.fruit import all_fruits, get_fruit, create_fruit, update_fruit, delete_fruit, like_fruit
+from models.fruit import all_fruits, get_fruit, create_fruit, update_fruit, delete_fruit, like_fruit, search_fruit
 from services.session_info import current_user
 
 def index():
@@ -40,3 +40,10 @@ def delete(id):
 def like(id):
   like_fruit(id, session['user_id'])
   return redirect('/')
+
+def search():
+  search=request.args.get('search')
+  search_result = search.capitalize()
+  fruit = search_fruit(search_result)
+  print(fruit)
+  return render_template('fruits/search.html', fruit=fruit, current_user=current_user)

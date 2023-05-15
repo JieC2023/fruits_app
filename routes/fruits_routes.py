@@ -1,5 +1,5 @@
 from flask import Blueprint
-from controllers.fruits_controller import index, new, create, edit, update, delete, like
+from controllers.fruits_controller import index, new, create, edit, update, delete, like, search
 
 fruits_routes = Blueprint('fruits_routes', __name__)
 
@@ -10,3 +10,5 @@ fruits_routes.route('/<id>/edit')(edit)
 fruits_routes.route('/<id>', methods=['POST'])(update)
 fruits_routes.route('/<id>/delete', methods=["POST"])(delete)
 fruits_routes.route('/<id>/likes', methods=["POST"])(like)
+
+fruits_routes.route('/search')(search)

@@ -17,4 +17,8 @@ def delete_fruit(id):
 	sql('DELETE FROM fruits WHERE id=%s RETURNING *', [id])
 
 def like_fruit(fruit_id, user_id):
-  sql("INSERT INTO likes(user_id, fruit_id) VALUES(%s, %s) RETURNING *", [user_id, fruit_id])        
+  sql("INSERT INTO likes(user_id, fruit_id) VALUES(%s, %s) RETURNING *", [user_id, fruit_id])
+
+def search_fruit(search):
+  fruit = sql("SELECT * FROM fruits WHERE name = %s", [search])
+  return fruit[0]

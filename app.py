@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()  # take environment variables from .env.
 import os
 from flask import Flask, redirect
 from routes.fruits_routes import fruits_routes
