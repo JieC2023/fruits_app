@@ -24,7 +24,7 @@ My second individual project: Fruit App
 ## :pencil2: Planning & Problem Solving
 - Please take a look at the workflow below.
 
-![drawing a engineering flow chart](https://i.imgur.com/x8qRcGe.jpeg)
+![drawing a engineering flow chart](flow.png)
 
 - 
 
